@@ -1,0 +1,391 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+   
+}
+
+header {
+    background-image: url(logo5.jpg);
+
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+}
+
+.logo img {
+    max-height: 70px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    transition: color 0.3s ease;
+   
+}
+
+nav ul li a:hover {
+    color: #3498db;
+}
+
+.contact-info {
+    text-align: right;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+}
+
+#destaque {
+    background-color: #3498db;
+    color: black;
+    text-align: center;
+    padding: 50px 0;
+    background-image: url(imagens/images.jpg);
+}
+
+.destaque-content img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.destaque-text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+
+#sobre-nos {
+    background-color: #ecf0f1;
+    padding: 50px 0;
+}
+
+.sobre-nos-content h2 {
+    color: #2c3e50;
+    font-size: 28px;
+}
+
+
+#servicos {
+    padding: 50px 0;
+}
+
+.servicos-content h2 {
+    color: #3498db;
+    font-size: 28px;
+}
+
+
+#produtos {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+}
+
+.produtos-content h2 {
+    color: #2c3e50;
+    font-size: 28px;
+}
+
+
+#depoimentos {
+    padding: 50px 0;
+}
+
+.depoimentos-content h2 {
+    color: #3498db;
+    font-size: 28px;
+}
+
+#blog {
+    background-color: #ecf0f1;
+    padding: 50px 0;
+}
+
+.blog-content h2 {
+    color: #2c3e50;
+    font-size: 28px;
+}
+
+
+#contato {
+    padding: 50px 0;
+}
+
+.contato-content h2 {
+    color: #3498db;
+    font-size: 28px;
+}
+
+.servico-item {
+    display: inline-block;
+    margin-right: 20px; 
+    text-align: center;
+}
+
+.servico-item img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.servico-item h3 {
+    font-size: 18px;
+    color: #2c3e50;
+    margin: 0;
+}
+.servico-item {
+    display: inline-block;
+    margin-right: 20px; 
+    text-align: center;
+    overflow: hidden; 
+    transition: transform 0.3s ease;
+}
+
+.servico-item:hover {
+    transform: scale(1.1); 
+}
+
+.servico-item img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease; 
+}
+
+.servico-item:hover img {
+    transform: scale(1.1); 
+}
+
+.servico-item h3 {
+    font-size: 18px;
+    color: #2c3e50;
+    margin: 0;
+}
+
+#produtos {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+}
+
+.produtos-content h2 {
+    color: #2c3e50;
+    font-size: 28px;
+    text-align: center;
+}
+
+.produtos-lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.produto {
+    width: 200px; 
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.produto img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.produto h3 {
+    font-size: 20px;
+    color: #2c3e50;
+    margin: 0;
+}
+
+.produto p {
+    color: #555;
+    margin: 10px 0;
+}
+
+.produto .preco {
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+#produtos {
+    background-color:  white;
+    padding: 50px 0;
+}
+
+.produtos-content h2 {
+    color: #2c3e50;
+    font-size: 28px;
+    text-align: center;
+}
+
+.produtos-lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.produto {
+    width: 200px;
+    text-align: center;
+    margin-bottom: 30px;
+    overflow: hidden; 
+    transition: transform 0.3s ease;
+}
+
+.produto:hover {
+    transform: scale(1.1);
+}
+
+.produto img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease; 
+}
+
+.produto:hover img {
+    transform: scale(1.1); 
+}
+
+.produto h3 {
+    font-size: 20px;
+    color: #2c3e50;
+    margin: 0;
+}
+
+.produto p {
+    color: #555;
+    margin: 10px 0;
+}
+
+.produto .preco {
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+#sobre-nos p{
+    text-indent: 50px;
+    text-align: justify;
+}
+
+#blog p{
+    text-indent: 50px;
+    text-align: justify;
+
+}
+
+
+
+header {
+    position: relative; 
+    background-color: #2c3e50;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ecf0f1;
+}
+
+header::before {
+    content: "PETSHOP"; 
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    font-weight: bold;
+    color: black;
+}
+
+#button1{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;   
+}
+div#imgRacao{
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 20px;
+    background-color: #2c3e50;
+    color: white;
+    width: 700px;
+    
+    margin-left: 10px;
+    margin-top: 10px;
+}
+div#imgRacao h2{
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    height: 60px;
+}
+div#imgRacao input{
+    text-align: center;
+    color: #e74c3c;
+    width: 100px;
+    height: 40px;
+}
+#imgRacao div{
+    position: relative;
+    display: inline;
+    left:50px;
+}
+#test p{
+    position: relative;
+    right: 70px;
+}
+
+#divBusca {
+    display: flex;
+    align-items: center; /* Centralizar verticalmente */
+}
+
+#imgLogo {
+    margin-right: 10px; /* Espaço entre a imagem e a barra de pesquisa */
+}
+
+#txtBusca {
+    /* Largura desejada para a barra de pesquisa */
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* Estilos para garantir que a imagem não exceda a altura da barra de pesquisa */
+img {
+    max-height: 100%; /* Ajusta a altura da imagem para a altura da barra de pesquisa */
+    width: auto; /* Permite que a largura da imagem se ajuste automaticamente */
+}

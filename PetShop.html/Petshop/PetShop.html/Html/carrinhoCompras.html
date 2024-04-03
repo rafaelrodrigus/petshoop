@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Carrinho</title>
+    <style>
+        .produto {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .produto img {
+            width: 200px;
+            height: 200px;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="contact-info">
+            <p>Telefone: (11) 1234-5678</p>
+            <p>Email: contato@seupetshop.com</p>
+            <p>Endereço: Rua do Pet, 123 - Cidade Petrópolis</p>
+        </div>
+    </header>
+    <h1>Meu Carrinho</h1>
+    <div class="produto">
+        <img src="../imagens/ração.jpg">
+        <div>
+            <h2>Produto: Ração Magnus 20Kg</h2>
+            <p>Magnus Premium 20kg - 1 unidade</p>
+            <h1>R$ 19,99 </h1>
+            <input type="button" value="Remover">
+        </div>
+    </div>
+    <div class="produto">
+        <img src="../imagens/Brinquedo.jpg">
+        <div>
+            <h2>Produto: Brinquedo para Pets</h2>
+            <p>Brinquedo para pet - 12 unidade</p>
+            <h1>R$ 12,99 </h1>
+            <input type="button" value="Remover">
+        </div>
+    </div>
+    <div class="produto">
+        <img src="../imagens/Coleira.jpg">
+        <div>
+            <h2>Produto: Coleira para Pets</h2>
+            <p>Coleira de pet - 3 unidade</p>
+            <h1>R$ 8,99 </h1>
+            <input type="button" value="Remover">
+        </div>
+    </div>
+    <h1>Consulta de CEP</h1>
+    <label for="cepInput">Digite o CEP:</label>
+    <input type="text" id="cepInput">
+    <button onclick="buscarEndereco()">Buscar</button>
+    <div id="endereco"></div>
+    <script>
+        function buscarEndereco() {
+            var cep = document.getElementById('cepInput').value;
+            var url = `https://viacep.com.br/ws/${cep}/json/`;
+            
+            fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                if(data.erro) {
+                    document.getElementById('endereco').innerText = "CEP não encontrado.";
+                } else {
+                    var endereco = `CEP: ${data.cep}, ${data.logradouro}, ${data.bairro}, ${data.localidade}, ${data.uf}`;
+                    document.getElementById('endereco').innerText = endereco;
+                }
+            })
+            .catch(error => console.error('Erro:', error));
+        }
+    </script>
+    <div>
+        <label for="cepInput">Digite o CPF:</label>
+        <input type="text">
+        <button onclick="buscarEndereco()">Buscar</button>
+    </div>
+    <div>
+        <label for="cepInput">Digite o Nome:</label>
+        <input type="text">
+        <button onclick="buscarEndereco()">Confirmar</button>
+    </div>
+</body>
+</html>
